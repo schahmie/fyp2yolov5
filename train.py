@@ -562,10 +562,10 @@ def main(opt, callbacks=Callbacks()):
     else:
         # Hyperparameter evolution metadata (including this hyperparameter True-False, lower_limit, upper_limit)
         meta = {
-            'lr0': (False, 1e-5, 1e-1),  # initial learning rate (SGD=1E-2, Adam=1E-3)
+            'lr0': (False, 1e-5, 1e-5),  # initial learning rate (SGD=1E-2, Adam=1E-3)
             'lrf': (False, 0.01, 1.0),  # final OneCycleLR learning rate (lr0 * lrf)
             'momentum': (False, 0.6, 0.98),  # SGD momentum/Adam beta1
-            'weight_decay': (False, 0.0, 0.001),  # optimizer weight decay
+            'weight_decay': (False, 0.0, 0.0001),  # optimizer weight decay
             'warmup_epochs': (False, 0.0, 5.0),  # warmup epochs (fractions ok)
             'warmup_momentum': (False, 0.0, 0.95),  # warmup initial momentum
             'warmup_bias_lr': (False, 0.0, 0.2),  # warmup initial bias lr
